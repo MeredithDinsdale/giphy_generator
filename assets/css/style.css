@@ -1,0 +1,52 @@
+body {background-image: url("https://media.giphy.com/media/Yqn9tE2E00k4U/giphy.gif");
+        }
+
+h1 {font-family: 'Monoton', cursive;
+            font-size: 7.5vw;
+            background: -webkit-linear-gradient(rgb(55, 223, 145), rgb(248, 53, 160));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+h2, h3, h4, h5, p {color: rgb(253, 207, 221);
+            letter-spacing: 2px;
+            font-family: 'ZCOOL QingKe HuangYou', cursive;
+        }
+
+#add-topic {background-color: 'pink';
+            color: 'green';
+            border-radius: '50px';
+        }
+
+#aButton {background-color: pink;
+            color: green;
+            font-size: 16px;
+            font-family: 'Audiowide', cursive;
+            border-radius: 50px;
+            width: auto;
+        }
+
+#userButton {background-color: pink;
+            color: green;
+            font-size: 16px;
+            font-family: 'Audiowide', cursive;
+            border-radius: 50px;
+            width: auto;
+        }
+
+#gifDiv {background-color: rgba(29, 26, 26, 0.979);
+            border: lightgray;
+            border-radius: 20px
+        }
+
+#gifImage {border: double 5px gray;
+            border-radius: 20px;
+            opacity: .9;
+            width: 490px;
+        }
+
+
+        /* FONT FAMILIES*********************************
+        font-family: 'Monoton', cursive;
+        font-family: 'Audiowide', cursive;
+        font-family: 'ZCOOL QingKe HuangYou', cursive; */
