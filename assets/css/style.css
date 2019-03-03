@@ -9,8 +9,10 @@ h1 {font-family: 'Monoton', cursive;
         }
 
 h2, h3, h4, h5, p {color: rgb(253, 207, 221);
-            letter-spacing: 2px;
-            font-family: 'ZCOOL QingKe HuangYou', cursive;
+            letter-spacing: 1.5px;
+            font-family: 'quicksand', sans-serif;
+            text-shadow: 2px 2px #080808;
+
         }
 
 #add-topic {background-color: 'pink';
@@ -31,6 +33,13 @@ h2, h3, h4, h5, p {color: rgb(253, 207, 221);
             font-size: 16px;
             font-family: 'Audiowide', cursive;
             border-radius: 50px;
+            width: auto;
+        }
+
+#controlButton {background-color: pink;
+            color: green;
+            font-size: 16px;
+            font-family: 'Audiowide', cursive;
             width: auto;
         }
 

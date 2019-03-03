@@ -1,6 +1,6 @@
 
 //=============================Rendering Existing Buttons================================
-let topicsArray = ["salamanders", "otters", "lemur"];
+let topicsArray = ["salamanders", "raccoon", "lemur"];
 for (i=0; i < topicsArray.length; i++) {
     let buttonInitial = $("<button>").text(topicsArray[i])
                                      .attr("data-topic", topicsArray[i])
@@ -9,16 +9,6 @@ for (i=0; i < topicsArray.length; i++) {
                                      .addClass('m-3');
     $("#buttons").append(buttonInitial);
 }
-
-//===============================Rendering The Clear Button=================================
-let clearButton = $('<button>').text('Clear')
-                               .addClass('clear')
-                               .attr('id', 'aButton');
-$('#buttons').append(clearButton);
-$(clearButton).on('click', function(event) {
-    $("#userButton").remove();
-});
-
 
 //=============================Adding New User Input Buttons==============================
 $("#add-topic").on("click", function(event) {
@@ -31,6 +21,18 @@ $("#add-topic").on("click", function(event) {
                                  .addClass('m-3');
                                  
     $('#buttons').append(buttonNew);
+    $('#topic-input').val('');
+    
+});
+
+//===============================Rendering The Clear Button=================================
+let clearButton = $('<button>').text('Clear')
+                               .addClass('clear')
+                               .addClass('m-3')
+                               .attr('id', 'controlButton');
+$('#buttons').append(clearButton);
+$(clearButton).on('click', function(event) {
+    $("#userButton").remove();
 });
 
 //=================================Clicking Gif Buttons======================================
@@ -39,8 +41,9 @@ $( document ).ready(function() {
 $('#buttons').on('click','.clickMe', function (event) {
     $("#gifs").empty();
     let topic = $(this).attr("data-topic");
+    let limit = 10
             console.log(topic);
-    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=Ge1SfcGlTb9DupOUNff1xwPdFKPyMZhk&limit=10";
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=Ge1SfcGlTb9DupOUNff1xwPdFKPyMZhk&limit=" + limit;
             console.log(queryURL);
     $.ajax({
       url: queryURL,
@@ -67,9 +70,12 @@ $('#buttons').on('click','.clickMe', function (event) {
             gifDiv.append(ratingText);
             gifDiv.prepend(gifImage);
             $('#gifs').append(gifDiv);
-        }
-    });
-});
+        
+            }
+           
+            });
+        });
+    });  
 
 
 //=======================================Animating Gifs=============================================
@@ -85,4 +91,5 @@ $("#gifs").on("click", ".gif", function() {
         $(this).attr("data-state", "still");
       }
     });
-});   
+
+ 
